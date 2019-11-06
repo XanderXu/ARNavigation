@@ -1,0 +1,20 @@
+PODS:
+  - BaiduMapKit (5.0.0)
+  - BMKLocationKit (1.8.0)
+
+DEPENDENCIES:
+  - BaiduMapKit
+  - BMKLocationKit
+
+SPEC REPOS:
+  trunk:
+    - BaiduMapKit
+    - BMKLocationKit
+
+SPEC CHECKSUMS:
+  BaiduMapKit: 3a875b001293a9ee6692febd549d8bf82108dbac
+  BMKLocationKit: 29f9f04827bfe2f2ca2c1c87b11161f05d4189a5
+
+PODFILE CHECKSUM: ef18d55e023249d67e9af82a0be697991b1de4e2
+
+COCOAPODS: 1.8.3

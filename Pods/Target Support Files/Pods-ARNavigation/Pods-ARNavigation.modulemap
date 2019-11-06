@@ -1,0 +1,6 @@
+framework module Pods_ARNavigation {
+  umbrella header "Pods-ARNavigation-umbrella.h"
+
+  export *
+  module * { export * }
+}
