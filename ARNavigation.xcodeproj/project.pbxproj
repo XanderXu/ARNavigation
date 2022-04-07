@@ -407,7 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UVD5KAFD23;
+				DEVELOPMENT_TEAM = T59W99K34W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ARNavigation",
@@ -423,7 +423,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ARNavigation/Vender/thirdlibs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ARNavigation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ARNavigation000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e";
@@ -436,7 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UVD5KAFD23;
+				DEVELOPMENT_TEAM = T59W99K34W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ARNavigation",
@@ -452,7 +452,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ARNavigation/Vender/thirdlibs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ARNavigation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ARNavigation000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e";
