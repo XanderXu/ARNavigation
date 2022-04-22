@@ -327,10 +327,10 @@ static NSString *annotationViewIdentifier = @"com.Baidu.BMKWalkingRouteSearch";
         // 百度地图上每一点，对应的真实距离，和纬度有关
         double metersPerMapPoint =  BMKMetersPerMapPointAtLatitude(self.userLocation.location.coordinate.latitude);
         
-        // 更新 AR 中的终点
+        // 更新 AR 中的终点（小飞机）
         double targetDisplayX = 0,targetDisplayY = 0;//AR显示终点的位置
         double targetDistance = BMKMetersBetweenMapPoints(userPoint, self.polylinePoints[self.pointCount - 1]);//终点的距离
-        if (targetDistance > 20) {//超过了 20 米，放在 20 米处
+        if (targetDistance > 20) {//超过了 20 米，则放在 20 米处
             targetDisplayX = 20.0 / targetDistance * (self.polylinePoints[self.pointCount - 1].x - userPoint.x) * metersPerMapPoint;
             targetDisplayY = 20.0 / targetDistance * (self.polylinePoints[self.pointCount - 1].y - userPoint.y) * metersPerMapPoint;
         } else {
@@ -339,8 +339,8 @@ static NSString *annotationViewIdentifier = @"com.Baidu.BMKWalkingRouteSearch";
         }
          // 终点的显示位置
         self.targetNode.simdPosition = simd_make_float3(targetDisplayX, 0, targetDisplayY);
-         // 终点的朝向，始终指向(0,0,0)点，即手机处
-        [self.targetNode simdLookAt:simd_make_float3(0)];
+         // 终点的朝向，始终指向手机处
+        [self.targetNode simdLookAt:_sceneView.pointOfView.simdPosition];
         
         
         // 更新最近的 6 个点
