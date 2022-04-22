@@ -391,7 +391,7 @@ static NSString *annotationViewIdentifier = @"com.Baidu.BMKWalkingRouteSearch";
         displayCount = self.pointCount > 5 ? 6 : self.pointCount;//可能少于 6 个，以实际为准
         
         // 第一次起点，在手机下方 1 米处
-        simd_float3 beginPosition = simd_make_float3(0,-1, 0);
+        simd_float3 beginPosition = simd_make_float3(0,-1, 0) + _sceneView.pointOfView.simdPosition;
         for (int i = 0; i < displayCount; i++) {//6个最近点之间连线
             float displayX = (closeSix[i].x - userPoint.x) * metersPerMapPoint * 0.1;//AR 中缩小 10 倍显示
             float displayY = (closeSix[i].y - userPoint.y) * metersPerMapPoint * 0.1;//AR 中缩小 10 倍显示
