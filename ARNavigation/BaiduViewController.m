@@ -70,11 +70,11 @@ static NSString *annotationViewIdentifier = @"com.Baidu.BMKWalkingRouteSearch";
     [super viewDidLoad];
     //将mapView添加到当前视图中
     [self.view addSubview:self.mapView];
+    [[[CLLocationManager alloc] init] requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];
     [self.locationManager startUpdatingHeading];
     self.mapView.showsUserLocation = YES;
     self.mapView.userTrackingMode = BMKUserTrackingModeFollowWithHeading;
-            
     // Set the view's delegate
     self.sceneView.delegate = self;
     // Show statistics such as fps and timing information
@@ -398,11 +398,11 @@ static NSString *annotationViewIdentifier = @"com.Baidu.BMKWalkingRouteSearch";
             simd_float3 endPosition = simd_make_float3(displayX,-1,displayY);//终点
             
             float displayDistance = simd_fast_distance(beginPosition,endPosition);
-            for (int j = 1; j < displayDistance; j++) {//1米放一个
+            for (int j = 1; j < displayDistance * 2; j++) {//0.5米放一个
                 SCNNode *cloneNode = [arrowNode clone];
                 // 对 x,z 进行插值
-                float x = j / displayDistance * (endPosition.x - beginPosition.x) + beginPosition.x;
-                float z = j / displayDistance * (endPosition.z - beginPosition.z) + beginPosition.z;
+                float x = 0.5 * j / displayDistance * (endPosition.x - beginPosition.x) + beginPosition.x;
+                float z = 0.5 * j / displayDistance * (endPosition.z - beginPosition.z) + beginPosition.z;
                 
                 // 每个箭头的位置
                 cloneNode.simdPosition = simd_make_float3(x, -1, z);

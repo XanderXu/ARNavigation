@@ -19,11 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     // 初始化定位SDK
-    [[BMKLocationAuth sharedInstance] checkPermisionWithKey:@"4DHqfe94uyDOoV777Ulf1XsO4cpGWOSg" authDelegate:self];
+    [[BMKLocationAuth sharedInstance] checkPermisionWithKey:@"4n2kGTHNrpu95PtwcysGGHcVd3TBhW73" authDelegate:self];
     // 要使用百度地图，请先启动BaiduMapManager
     BMKMapManager *mapManager = [[BMKMapManager alloc] init];
     // 如果要关注网络及授权验证事件，请设定generalDelegate参数
-    BOOL ret = [mapManager start:@"4DHqfe94uyDOoV777Ulf1XsO4cpGWOSg"  generalDelegate:nil];
+    BOOL ret = [mapManager start:@"4n2kGTHNrpu95PtwcysGGHcVd3TBhW73"  generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }
